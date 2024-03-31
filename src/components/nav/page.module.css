@@ -6,7 +6,7 @@
   gap: 30px;
 }
 
-.nav a {
+.nav_link {
   flex: 1;
   padding: 12px 0;
   color: hsl(var(--foreground) / .6);
@@ -15,10 +15,15 @@
   transition: all 200ms ease-in-out;
 }
 
-.nav a:hover {
-  color: hsl(var(--foreground) / .9);
+.nav_link:hover {
+  color: hsl(var(--foreground) / .7);
   font-weight: 400;
 }
+
+.active {
+  color: hsl(var(--foreground));
+}
+
 
 
 
