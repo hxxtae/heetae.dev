@@ -1,5 +1,6 @@
 :root {
   --max-width: 768px;
+  --header: 56px;
   --border-radiusR: 12px;
   --border-radiusL: 7px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
@@ -90,4 +91,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
