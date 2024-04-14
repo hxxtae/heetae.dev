@@ -1,29 +1,17 @@
 .header {
   max-width: var(--max-width);
+  height: var(--header);
   margin: 0 auto;
   padding: 8px 20px;
   border-bottom: 1px solid hsl(var(--border));
   display: flex;
   justify-content: stretch;
   align-items: center;
+  gap: 7px;
   background-color: var(--card);
   color: var(--primary);
 }
 
-.theme_button {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  border: 1px solid hsl(var(--border));
-  border-radius: 7px;
+.h_logo {
   cursor: pointer;
-  transition: all 200ms ease-in-out;
-  background-color: transparent;
-}
-
-.theme_button:hover {
-  background-color: hsl(var(--border) / .6);
 }

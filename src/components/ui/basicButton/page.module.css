@@ -1,0 +1,14 @@
+.basic_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid hsl(var(--border));
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  background-color: transparent;
+}
+
+.basic_button:hover {
+  background-color: hsl(var(--border) / .6);
+}
