@@ -24,6 +24,54 @@
   color: hsl(var(--foreground));
 }
 
+.overlay {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+}
 
+.side_nav {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  max-width: 400px;
+  min-width: 200px;
+  width: 72%;
+  height: 100vh;
+  gap: 8px;
+  padding: 25px;
+  border-right: 1px solid hsl(var(--border));
+  background-color: hsl(var(--background));
+  z-index: 1;
+}
 
+.side_nav .nav_link {
+  flex: 0;
+  font-size: 16px;
+}
 
+.side_nav .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  box-sizing: content-box;
+  padding: 5px;
+  transition: all 200ms ease-in-out;
+}
+
+.side_nav .close_icon {
+  width: 16px;
+  height: 16px;
+  color: hsl(var(--foreground) / .6);
+}
+
+.side_nav .close:hover,
+.side_nav .close:active {
+  color: hsl(var(--foreground) / .8);
+  font-weight: 400;
+}

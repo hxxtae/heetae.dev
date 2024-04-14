@@ -1,15 +1,20 @@
 "use client"
 
+import { useEffect, useState } from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
+
+import { BasicButton } from '../ui/basicButton';
 import S from './page.module.css';
 import Nav from '../nav';
-import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header() {
   return (
     <section className={S.header}>
-      <Nav/>
+      <Nav />
+      <MainLogo />
       <ThemeChanger />
     </section>
   )
@@ -28,11 +33,19 @@ function ThemeChanger() {
   }, []);
 
   return (
-    <button className={S.theme_button} type="button" onClick={toggleTheme}>
-      {mounted && theme === "dark" ?
-          <Moon /> :
-          <Sun />
+    <BasicButton width='32px' height='32px' onclick={toggleTheme}>
+      {
+        mounted && theme === "dark" ?
+        <Moon /> : <Sun />
       }
-    </button>
+    </BasicButton>
   );
+}
+
+function MainLogo() {
+  return (
+    <Link href={"/"}>
+      <Image className={S.h_logo} src="/H_2.png" alt="logo h" width={32} height={32} />
+    </Link>
+  )
 }
