@@ -1,0 +1,35 @@
+.card {
+  padding: 20px;
+  background-color: hsl(var(--tertiary));
+  border-radius: 5px;
+  border: 1px solid hsl(var(--border));
+  margin-bottom: 24px;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card .card_header {
+  margin-bottom: 20px;
+}
+
+.card .card_title {
+  margin-bottom: 10px;
+}
+
+.card .card_description {
+
+}
+
+.card .card_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.card .card_footer {
+
+}
