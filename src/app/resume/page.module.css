@@ -3,4 +3,130 @@
   margin: 0 auto;
   padding: 20px;
   color: hsl(var(--foreground));
+  background-color: hsl(var(--primary));
+}
+
+.resume .job {
+  margin-bottom: 10px;
+}
+
+.resume .name {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.resume .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 30px 0;
+}
+
+/* experience */
+.resume .experience {
+  padding-top: 40px;
+  border-top: 1px solid hsl(var(--border));
+  margin-top: 20px;
+}
+
+.resume .experience .head {
+  margin-bottom: 20px;
+}
+
+/* experience of card */
+.resume .experience .experience_title {
+  margin-bottom: 10px;
+}
+
+.resume .experience .position {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* experience of content */
+.resume .experience .title {
+  display: flex;
+  gap: 8px;
+}
+
+.resume .experience .title .link {
+  color: hsl(var(--link));
+}
+
+.resume .experience .description {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.resume .experience .do_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.resume .experience .tech_list {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+/* experience of do in content */
+.resume .experience .do {
+  font-weight: 400;
+}
+
+.resume .experience .do_content {
+  text-indent: 10px;
+}
+
+.resume .experience .tech {
+  font-size: 12px;
+}
+
+.resume .experience .tech::after {
+  content: ',';
+}
+
+.resume .experience .tech:last-child::after {
+  content: '';
+}
+
+/* other_experience */
+.resume .other_experience {
+  padding-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.resume .other_experience .head {
+  margin-bottom: 20px;
+}
+
+.resume .other_experience .name {
+  margin-bottom: 10px;
+}
+
+.resume .other_experience .list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.resume .other_experience .title {
+  text-indent: 10px;
+}
+
+.resume .other_experience .title_link {
+  color: hsl(var(--link));
+  text-indent: 10px;
+}
+
+.resume .other_experience .title_link:hover {
+  text-decoration: underline;
 }
