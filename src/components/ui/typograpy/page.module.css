@@ -1,0 +1,84 @@
+.wrapper {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* head1 */
+.head1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+/* head2 */
+.head2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+/* head3 */
+.head3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+/* head4 */
+.head4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+/* head5 */
+.head5 {
+  font-size: 18px;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+/* head6 */
+.head6 {
+  font-size: 16px;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+/* info */
+.info {
+  font-size: 14px;
+  color: hsl(var(--foreground));
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+/* infoMin */
+.info_min {
+  font-size: 12px;
+  color: hsl(var(--muted-foreground) / .8);
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+/* text */
+.text {
+  word-wrap: break-word;
+  word-break: keep-all;
+  font-size: 13px;
+  font-weight: 300;
+  color: hsl(var(--foreground));
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* textBlur */
+.text_blur {
+  word-wrap: break-word;
+  word-break: keep-all;
+  font-size: 13px;
+  font-weight: 400;
+  color: hsl(var(--popover-foreground));
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
