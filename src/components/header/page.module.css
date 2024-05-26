@@ -1,4 +1,7 @@
 .header {
+  position: sticky;
+  top: 0;
+  width: 100%;
   max-width: var(--max-width);
   height: var(--header);
   margin: 0 auto;
@@ -8,8 +11,7 @@
   justify-content: stretch;
   align-items: center;
   gap: 7px;
-  background-color: var(--card);
-  color: var(--primary);
+  background-color: hsl(var(--card));
 }
 
 .h_logo {

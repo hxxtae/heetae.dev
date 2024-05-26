@@ -1,10 +1,11 @@
 import "./style/globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans_KR } from "next/font/google";
 import { ThemeProvider } from './components/themeProvider';
 import Header from '@/components/header';
+import Footer from '@/components/footer';
 
-const inter = Inter({ subsets: ["latin"] });
+const notoSansKr = Noto_Sans_KR({ subsets: ["latin"] });
 
 interface RootLayoutProps {
   readonly children: React.ReactNode;
@@ -13,17 +14,18 @@ interface RootLayoutProps {
 export default function RootLayout({ children, }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={notoSansKr.className}>
         <ThemeProvider
           attribute='class'
           defaultTheme='light'
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           <main>
-            <Header />
             {children}
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

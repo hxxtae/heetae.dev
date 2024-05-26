@@ -44,7 +44,7 @@ function ThemeChanger() {
 
 function MainLogo() {
   return (
-    <Link href={"/"}>
+    <Link href={"/"} style={{ display: "flex", alignItems: "center" }}>
       <Image className={S.h_logo} src="/H_2.png" alt="logo h" width={32} height={32} />
     </Link>
   )

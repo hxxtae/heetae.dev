@@ -1,12 +1,12 @@
 .section {
   max-width: var(--max-width);
-  height: calc(100vh - var(--header));
   margin: 0 auto;
   padding: 20px;
   color: hsl(var(--foreground));
   display: flex;
   justify-content: center;
   align-items: center;
+  height: calc(100vh - 200px);
 }
 
 .section .home_logo{

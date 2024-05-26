@@ -11,12 +11,12 @@
   padding: 12px 0;
   color: hsl(var(--foreground) / .6);
   font-size: 14px;
-  font-weight: 300;
-  transition: all 200ms ease-in-out;
+  font-weight: 400;
+  transition: all 120ms ease-in-out;
 }
 
 .nav_link:hover {
-  color: hsl(var(--foreground) / .7);
+  color: hsl(var(--foreground) / .8);
   font-weight: 400;
 }
 
