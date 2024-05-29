@@ -37,7 +37,7 @@ export default function Resume() {
 
             <CardContent>
               {item.content.map((content) => (
-                <div key={content.title}>
+                <div key={content.title} className={S.content}>
                   <Head5 className={S.title}>
                     {content.title}
                     {content.link &&

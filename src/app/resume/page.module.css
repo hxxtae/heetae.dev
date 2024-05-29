@@ -46,6 +46,10 @@
 }
 
 /* experience of content */
+.resume .experience .content {
+  width: 100%;
+}
+
 .resume .experience .title {
   display: flex;
   gap: 8px;
@@ -72,6 +76,7 @@
   display: flex;
   justify-content: flex-start;
   gap: 5px;
+  flex-wrap: wrap;
 }
 
 /* experience of do in content */

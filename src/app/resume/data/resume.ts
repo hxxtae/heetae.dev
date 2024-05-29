@@ -249,6 +249,10 @@ const resume: Resume = {
         {
           title: "algorithm 블로그 글 문서 작성",
           url: "https://algorithms-blog.vercel.app"
+        },
+        {
+          title: "프로그래머스 PCCP 테스트 3회",
+          url: "",
         }
       ]
     },
