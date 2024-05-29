@@ -1,0 +1,14 @@
+.page_layout {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+  color: hsl(var(--foreground));
+}
+
+.page_layout .title {
+  margin-bottom: 10px;
+}
+
+.page_layout .description {
+  font-size: 14px;
+}
