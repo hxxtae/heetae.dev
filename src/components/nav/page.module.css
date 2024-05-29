@@ -32,8 +32,8 @@
 }
 
 .side_nav {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  inset: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
