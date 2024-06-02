@@ -243,11 +243,11 @@ const resume: Resume = {
           url: "https://solved.ac/profile/fkdlxmfkdl1"
         },
         {
-          title: "arena",
-          url: "https://solved.ac/profile/fkdlxmfkdl1/arena"
+          title: "atcoder",
+          url: "https://atcoder.jp/users/hxxtae"
         },
         {
-          title: "algorithm 블로그 글 문서 작성",
+          title: "algorithm 문제 풀이 블로그 작성",
           url: "https://algorithms-blog.vercel.app"
         },
         {
