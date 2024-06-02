@@ -35,7 +35,7 @@ type Resume = {
 
 const resume: Resume = {
   name: "김희태",
-  job: "Front Engineer",
+  job: "Frontend Engineer",
   contact: "fkdlxmfkdl@gmail.com",
   about: [
     "오랫동안 내것으로 만들기 위해 기록하고 문서화하는 것을 좋아합니다.\n이를 통해 이전 회사에서 12명의 개발자 분들에게 개발 가이드 문서를 제공한 경험이 있으며,\n개인 블로그와 기술 블로그를 통해 지식과 문제 해결 과정을 기록하고 있습니다.",
