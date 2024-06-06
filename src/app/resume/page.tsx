@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
-import { Head1, Head4, Head5, Head6, InfoMin, Text, TextBlur } from '@/components/ui/typograpy';
+import { Head1, Head4, Head5, Head6, IconLink, InfoMin, Text, TextBlur, TextLink } from '@/components/ui/typograpy';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import metadata from '@/utils/metadata';
 import resume from './data/resume';
@@ -40,18 +40,17 @@ export default function Resume() {
                 <div key={content.title} className={S.content}>
                   <Head5 className={S.title}>
                     {content.title}
-                    {content.link &&
-                      <Link href={content.link} target='_blank'>
-                        <LinkIcon width={12} height={12} className={S.link} />
-                      </Link>
-                    }
+                    {content.link && <IconLink href={content.link} />}
                   </Head5>
                   <InfoMin className={S.description}>{content.description}</InfoMin>
 
                   <div className={S.do_list}>
                     {content.doList.map((doItem, doIndex) => (
                       <>
-                        <Text key={doIndex} className={S.do}>{doItem.do}</Text>
+                        <div className={S.do_wrapper}>
+                          <Text key={doIndex} className={S.do}>{doItem.do}</Text>
+                          {doItem.url && <IconLink href={doItem.url} />}
+                        </div>
                         {doItem.content.map((content, contentIdx) => (
                           <Text key={contentIdx} className={S.do_content}>· {content}</Text>
                         ))}
@@ -85,9 +84,7 @@ export default function Resume() {
             <div className={S.list}>
               {item.content.map((content, contentIdx) => (
                 content.url ? 
-                  <Link key={contentIdx} href={content.url ?? ""} target="_blank">
-                    <Text key={contentIdx} className={S.title_link}>· {content.title}</Text>
-                  </Link> :
+                  <TextLink key={contentIdx} className={S.title} href={content.url} title={`· ${content.title}`} /> :
                   <Text key={contentIdx} className={S.title}>· {content.title}</Text>
               ))}
             </div>

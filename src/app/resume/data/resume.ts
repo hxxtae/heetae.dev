@@ -1,6 +1,7 @@
 type DoList = {
   do: string;
   content: string[];
+  url?: string;
 }
 
 type Content = {
@@ -155,7 +156,8 @@ const resume: Resume = {
                 "결제 과정에 요구사항 변동이 생겨도 유연한 컴포넌트 필요",
                 "Toss의 퍼널 개념을 인용하여 결제 과정에 반영 (useFunnel 구현)",
                 "결제 과정 사이에 변동이 생겨도 유연한 결제 프로세스 변동 가능"
-              ]
+              ],
+              url: "https://dev.to/hxxtae/tossyi-peoneolfunnel-paeteon-jeogyonghaebogi-2n7c"
             },
             {
               do: "Firebase를 사용하여 인증, CRUD 및 스토리지 기능 활용",
@@ -164,7 +166,7 @@ const resume: Resume = {
                 "Firebase Firestore을 통해 커머스 DB 스키마 생성 및 CRUD 구현",
                 "Authentication 을 통해 구매자 및 판매자 생성",
                 "Storage을 통한 상품 이미지 업로드 및 상품 이미지 로드 기능 구현"
-              ]
+              ],
             },
             {
               do: "중복된 상품 조회 시 렌더링 성능 개선",
@@ -174,7 +176,8 @@ const resume: Resume = {
                 "react.memo를 사용하여 리렌더링 발생하는 컴포넌트 메모이제이션",
                 "Before : 자식 컴포넌트 100회 렌더링 시 100회 전체 리렌더링",
                 "After : 자식 컴포넌트 단 1회만 렌더링"
-              ]
+              ],
+              url: "https://dev.to/hxxtae/react-dev-toolsyi-profilerreul-hwalyonghan-rendeoring-seongneung-gaeseon-h1g"
             },
             {
               do: "Tree Shaking 및 Code Spliting 으로 번들 사이즈 개선",
@@ -185,7 +188,8 @@ const resume: Resume = {
                 "결과적으로 빌드 사이즈 경량화 및 로드 성능 개선",
                 "빌드 크기 : 1,074KB → 289KB",
                 "빌드 시간 : 1m 46s → 5.57s"
-              ]
+              ],
+              url: "https://dev.to/hxxtae/lighthousereul-hwalyonghan-tree-shaking-8ie"
             }
           ],
           tech: ["React", "TypeScript", "Vite", "zustand", "React-Query", "styled-components", "mui"],

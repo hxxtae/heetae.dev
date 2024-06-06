@@ -1,6 +1,8 @@
 import React, { PropsWithChildren } from 'react';
 import S from './page.module.css';
 import classNames from 'classnames';
+import Link from 'next/link';
+import { LinkIcon } from 'lucide-react';
 
 export const Head1 = React.forwardRef<
   HTMLHeadingElement,
@@ -101,3 +103,27 @@ export const TextBlur = React.forwardRef<
   )
 });
 TextBlur.displayName = "TextBlur";
+
+export const TextLink = React.forwardRef<
+  HTMLAnchorElement,
+  React.HTMLAttributes<HTMLAnchorElement> & { href: string }
+>(({ className, href = "", title, ...props }, ref) => {
+  return (
+    <Link ref={ref} className={S.textLink} href={href} target="_blank" {...props}>
+      <p className={classNames({[S.text]: true, [className ?? '']: true})} style={{ color: "inherit" }}>{title}</p>
+    </Link>
+  )
+});
+TextLink.displayName = "TextLink";
+
+export const IconLink = React.forwardRef<
+  HTMLAnchorElement,
+  React.HTMLAttributes<HTMLAnchorElement> & { href: string }
+>(({ className, href = "", ...props }, ref) => {
+  return (
+    <Link ref={ref} className={classNames({[S.iconLink]: true, [className ?? '']: true})} href={href} target="_blank" {...props}>
+      <LinkIcon width={12} height={12} style={{ color: "inherit" }} />
+    </Link>
+  )
+});
+IconLink.displayName = "IconLink";

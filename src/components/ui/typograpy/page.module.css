@@ -82,3 +82,17 @@
   line-height: 1.6;
   white-space: pre-wrap;
 }
+
+/* textLink */
+.textLink {
+  color: hsl(var(--link));
+}
+
+.textLink:hover {
+  text-decoration: underline;
+}
+
+/* iconLink */
+.iconLink {
+  color: hsl(var(--link));
+}
