@@ -50,51 +50,93 @@ const resume: Resume = {
       period: "22.04 ~ 24.05",
       content: [
         {
+          title: "BBBick",
+          description: "온라인 북(Book) 커머스 플랫폼 입니다.",
+          doList: [
+            {
+              do: "유연한 상품 결제 과정을 위한 결제 퍼널 도입",
+              content: [
+                "[문제] 결제 과정에 요구사항 변동이 생겨도 유연한 수정이 가능한 방법 필요",
+                "Toss의 퍼널 패턴 개념을 활용하여 결제 프로세스 구축",
+                "결제 과정에 추가 변동이 생겨도 유연한 결제 프로세스로 유지보수가 용이해짐"
+              ],
+              url: "https://dev.to/hxxtae/tossyi-peoneolfunnel-paeteon-jeogyonghaebogi-2n7c"
+            },
+            {
+              do: "상품 조회 시 렌더링 성능 개선",
+              content: [
+                "[문제] 무한 스크롤로 인한 상품 목록 로드 시 마운트된 상품 리렌더링 문제 발견",
+                "React Dev Tools를 활용하여 리렌더링 병목구간 확인",
+                "react 메모이제이션 기법을 사용하여 리렌더링 발생하는 컴포넌트 문제 해결",
+                "컴포넌트 렌더링 속도 50% 개선 / 22.4ms → 11.6ms",
+              ],
+              url: "https://dev.to/hxxtae/react-dev-toolsyi-profilerreul-hwalyonghan-rendeoring-seongneung-gaeseon-h1g"
+            },
+            {
+              do: "Tree Shaking 및 Code Spliting 으로 번들 사이즈 개선",
+              content: [
+                "[문제] 프로젝트 빌드 시간이 오래 거리며, 번들 사이즈가 큰 문제 발견",
+                "Lighthouse Treemap을 통해 번들링된 큰 사이즈 라이브러리 확인",
+                "트리 쉐이킹 기법을 통해 필요한 불필요한 모듈 제거",
+                "코드 스플리팅 기법을 통해 큰 라이브러리 청크 파일 사이즈 최적화",
+                "빌드 크기 73% 개선 / 1,074KB → 289KB",
+                "빌드 시간 94% 개선 / 1m 46s → 5.57s"
+              ],
+              url: "https://dev.to/hxxtae/lighthousereul-hwalyonghan-tree-shaking-8ie"
+            },
+            {
+              do: "사용자 경험 최적화를 위한 초기 로딩 성능 개선",
+              content: [
+                "[문제] 사이트 접속 시 최초 렌더링 까지 시간이 오래 걸리는 문제 발견",
+                "Lighthouse을 통해 LCP 시간 단축 필요성 및 개선 항목 확인",
+                "이미지 최적화, 라우터 페이지 코드 분할 및 지연 로딩으로 LCP 속도 개선",
+                "LCP 29% 개선 / 12.4s → 8.7s / 프로덕션 : 1.4s"
+              ],
+              url: "https://dev.to/hxxtae/lighthousereul-hwalyonghayeo-lcp-jeomsu-gaeseonhagi-3o3i"
+            }
+          ],
+          tech: ["React", "TypeScript", "Vite", "zustand", "React-Query", "styled-components", "mui"],
+          techHighlight: ["React", "TypeScript", "Vite", "zustand", "React-Query"],
+          link: "https://github.com/hxxtae/bbbick"
+        },
+        {
           title: "welaundry",
           description: "세탁소 전용 포스(POS) 웹 애플리케이션 입니다.",
           doList: [
             {
-              do: "고유한 포스 데이터에만 접근이 가능하도록 구현",
+              do: "사용자 인증 토큰 보안 문제점 개선",
               content: [
-                "[1단계] 웹 포스의 경우 사용자 인증 토큰 필요",
-                "localStorage로 사용자 인증 및 사용자 데이터 구분",
-                "[2단계] localStorage에 저장 시 XSS 공격 보안 문제 발견",
-                "쿠키와 인증 토큰을 활용한 방법으로 문제 해결 시도",
-                "Cookie(http-only), JWT 로 XSS 보안 문제 해결 및 인증 관리 개선",
-                "인증된 정보가 브라우저에 남아있는 경우, 유효 기간 설정 가능"
-              ]
-            },
-            {
-              do: "로딩 컴포넌트의 재사용성을 효과적으로 구현",
-              content: [
-                "로딩 컴포넌트가 다른 컴포넌트 안에서 복잡한 Layout 문제",
-                "React Portal을 사용하여 로딩 컴포넌트 렌더링 시 z-index에 따른 Layout의 복잡성을 낮춤",
-                "독립적인 컴포넌트로 재사용성을 높임"
-              ]
-            },
-            {
-              do: "최초 로딩 이미지 렌더링 시간 개선",
-              content: [
-                "이미지 렌더링 시간이 길어지는 문제 발견",
-                "이미지 렌더링 시점에서 다운로드를 진행하지 않고, 사전에 이미지 파일을 preload하여 미리 다운로드를 진행",
-                "이미지 사이즈 최적화 및 이미지 inline css 크기 할당",
-                "로그인 화면에서 이미지 렌더링 시간 단축 및 LCP 개선 (Performance 점수 : 90 → 96)"
+                "[문제] 쿠키나 localStorage로 사용자 인증 토큰 저장 시 XSS 공격 보안 문제 발견",
+                "window.localStorage 와 같이 스트립트로 쉽게 접근할 수 있는 문제 확인",
+                "세션을 통한 인증 방법은 서버에 리소스 부담을 주기 때문에 JWT을 사용하여 보안 쿠키에 저장",
+                "더 이상 스크립트를 통한 인증 토큰에 접근 불가",
               ]
             },
             {
               do: "CSRF 공격을 고려하여 취약한 보안을 개선",
               content: [
-                "수정 요청 API가 외부에서도 호출되는 문제 발견",
-                "서버에서 승인된 Origin으로 요청 시에만 API 요청이 가능하도록 처리",
-                "CORS의 Credentials + 요청 헤더에 Security Token 사용"
+                "[문제] 게시 글 수정 요청 API가 다른 Origin에서도 호출이 가능한 문제 발견",
+                "서버에서 승인된 Origin으로만 API 요청이 가능하도록 CORS Origin 설정",
+                "CORS Credentials 방식으로 보안 토큰을 함께 서버로 전송하여 무단 요청 방지",
+                "지정된 Origin 클라이언트에서 인증 헤더 토큰을 가진 경우에만 API 요청 가능"
               ]
             },
             {
-              do: "포스 화면이 렌더링되는 시간 개선",
+              do: "루트 컴포넌트 생성을 통한 z-index 복잡성 개선",
               content: [
-                "포스 최초 렌더링 시간이 길어지는 문제 발견",
-                "React 18의 lazy 로딩과  Suspense를 통해 router 코드 분할을 수행",
-                "포스 접속 시 최초 렌더링 시간 단축 및 LCP 개선 (Performance 점수 : 60 → 73)"
+                "[문제] 로딩 컴포넌트 마운트 시 레이아웃이 요소 뒤로 겹치는 문제 발견",
+                "z-index의 값을 높여 주는 방법으로는 코드의 복잡성과 유지보수성이 저하됨",
+                "React Portal을 사용하여 새로운 루트 노드에 마운트하여 레아아웃 복잡성 제거",
+              ]
+            },
+            {
+              do: "CSR 최적화를 위한 컴포넌트 로드 시간 개선",
+              content: [
+                "[문제] 포스 최초 접속 시 렌더링 시간이 오래 걸리는 문제 발견",
+                "최초 로드 시 모든 페이지 컴포넌트를 다운로드하여 blocking 시간이 길어짐 확인",
+                "React 18의 lazy,  Suspense를 통해 라우터 기준 코드 분할하여 렌더링 시간 개선",
+                "리소스 Finish Time 31% 개선 / 4.12s → 2.82s",
+                "Lighthouse Performance 점수 43% 개선 / 60 → 86"
               ]
             },
           ],
@@ -107,95 +149,38 @@ const resume: Resume = {
           description: "framer-motion 라이브러리를 활용한 Netflix Clone 웹 사이트 입니다.",
           doList: [
             {
-              do: "모바일 앱에서 사용되는 Splash 기능 구현",
+              do: "영화 데이터 비동기 요청 시간을 단축",
               content: [
-                "HOC 개념을 활용",
-                "[1단계] 특별한 사용자 경험을 높이고, 짧은 LCP를 위해 도입",
-                "LCP : 1.6s, FCP : 0.9s",
-                "[2단계] 새로 고침으로 Splash가 반복되는 문제 발견",
-                "SessionStorage를 사용하여 해결"
+                "[문제] 영화 데이터 조회 hook 비동기 요청이 직렬로 처리되는 문제 발견",
+                "컴포넌트 내에서 hook 호출 시 맨 위 hook 부터 순차적으로 호출이 진행됨을 확인",
+                "비동기 요청을 병렬로 처리하기 위해 따로 자식 컴포넌트로 분리하여 API 요청",
+                "비동기 응답 시간을 직렬 요청 보다 4배 단축",
               ]
             },
             {
-              do: "영화 데이터 비동기 요청 시 시간을 단축",
+              do: "최초 웹 페이지 접속 시 빈 화면이 보여지는 시간 단축",
               content: [
-                "영화 목록 비동기 요청이 직렬로 처리되는 문제 발견",
-                "부모 컴포넌트와  자식 컴포넌트로 나누고, 자식 컴포넌트에서 API 요청",
-                "직렬이 아닌 병렬로 비동기 요청됨",
-                "다수 컨텐츠(영화, 시리즈) 비동기 요청 시간 단축"
+                "[문제] 사용자가 콘텐츠를 보기 까지 흰 화면이 오랫동안 보여지는 문제 발견",
+                "Chrome Network 탭에서 모든 페이지 리소스가 다운로드 진행됨을 확인",
+                "코드 분할을 통해 Dynamic import하여 필요한 페이지의 컴포넌트 및 파일 다운로드 진행",
+                "Lighthouse Performance 점수 93 / LCP 시간 1.4s"
               ]
             },
             {
-              do: "최초 웹 페이지 접속 시 렌더링 시간을 단축",
+              do: "수많은 영화 목록 중복 리렌더링 문제 개선",
               content: [
-                "사용자가 컨텐츠를 보기 위한 시간이 길어지는 문제 발견",
-                "React의 lazy 로딩과 Suspense 를 통해 코드 분할 진행 → Movie와 Series 페이지 코드 분할 진행",
-                "현재 렌더링되는 컴포넌트만 다운로드 진행되어 LCP 개선 (Performance 점수 : 93)",
+                "[문제] 마운트된 영화 목록 컴포넌트가 목록 개수만큼 리렌더링 되는 문제 발견",
+                "컴포넌트에 선언된 console.count 를 통해 불필요한 리렌더링이 일어나는 컴포넌트 확인",
+                "고차 컴포넌트 react memo를 사용하여 Virtual DOM에 이전 DOM을 메모이제이션",
+                "메모리는 더 사용하지만 렌더링 성능은 개선",
+                "컴포넌트 렌더링 속도 62% 개선 / 13.2ms → 4.9ms"
               ]
             },
-            {
-              do: "수많은 영화 목록을 리렌더링하는 시간을 단축",
-              content: [
-                "동일한 페이지 리렌더링 문제를 개선해야 하는 문제 발견",
-                "한번 렌더링된 영화목록을 React memo를 통해 컴포넌트 메모이제이션",
-                "메모리는 더 사용하지만 불필요한 렌더링으로 인한 리소스를 줄임"
-              ]
-            }
           ],
           tech: ["React", "TypeScript", "Framer-Motion", "styled-components"],
           techHighlight: ["React", "TypeScript", "Framer-Motion"],
           link: "https://github.com/hxxtae/nomflix"
         },
-        {
-          title: "BBBick",
-          description: "온라인 북(Book) 커머스 플랫폼 입니다.",
-          doList: [
-            {
-              do: "유연한 상품 결제 과정을 위한 결제 퍼널 도입",
-              content: [
-                "결제 과정에 요구사항 변동이 생겨도 유연한 컴포넌트 필요",
-                "Toss의 퍼널 개념을 인용하여 결제 과정에 반영 (useFunnel 구현)",
-                "결제 과정 사이에 변동이 생겨도 유연한 결제 프로세스 변동 가능"
-              ],
-              url: "https://dev.to/hxxtae/tossyi-peoneolfunnel-paeteon-jeogyonghaebogi-2n7c"
-            },
-            {
-              do: "Firebase를 사용하여 인증, CRUD 및 스토리지 기능 활용",
-              content: [
-                "ServerLess 상태의 클라이언트 개발을 위한 서버 필요",
-                "Firebase Firestore을 통해 커머스 DB 스키마 생성 및 CRUD 구현",
-                "Authentication 을 통해 구매자 및 판매자 생성",
-                "Storage을 통한 상품 이미지 업로드 및 상품 이미지 로드 기능 구현"
-              ],
-            },
-            {
-              do: "중복된 상품 조회 시 렌더링 성능 개선",
-              content: [
-                "무한 스크롤로 인한 상품 목록 로드 시 중복된 상품 리렌더링 발생",
-                "React Dev Tools를 활용한 중복 컴포넌트 확인",
-                "react.memo를 사용하여 리렌더링 발생하는 컴포넌트 메모이제이션",
-                "Before : 자식 컴포넌트 100회 렌더링 시 100회 전체 리렌더링",
-                "After : 자식 컴포넌트 단 1회만 렌더링"
-              ],
-              url: "https://dev.to/hxxtae/react-dev-toolsyi-profilerreul-hwalyonghan-rendeoring-seongneung-gaeseon-h1g"
-            },
-            {
-              do: "Tree Shaking 및 Code Spliting 으로 번들 사이즈 개선",
-              content: [
-                "초기 로드 및 빌드 시간이 오래 걸리는 문제 발생",
-                "무거운 라이브러리의 낭비되는 모듈 제거 및 경량화된 라이브러리 사용",
-                "코드 분할을 통해 사용자가 필요한 파일만 다운로드 진행",
-                "결과적으로 빌드 사이즈 경량화 및 로드 성능 개선",
-                "빌드 크기 : 1,074KB → 289KB",
-                "빌드 시간 : 1m 46s → 5.57s"
-              ],
-              url: "https://dev.to/hxxtae/lighthousereul-hwalyonghan-tree-shaking-8ie"
-            }
-          ],
-          tech: ["React", "TypeScript", "Vite", "zustand", "React-Query", "styled-components", "mui"],
-          techHighlight: ["React", "TypeScript", "Vite", "zustand", "React-Query"],
-          link: "https://github.com/hxxtae/bbbick"
-        }
       ]
     },
     {
@@ -268,7 +253,16 @@ const resume: Resume = {
           url: ""
         }
       ]
-    }
+    },
+    {
+      name: "Others",
+      content: [
+        {
+          title: "항해99 취업 리부트 코스 (2024.03 ~ 2024.06)",
+          url: ""
+        }
+      ]
+    },
   ]
 }
 
