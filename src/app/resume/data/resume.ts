@@ -100,7 +100,7 @@ const resume: Resume = {
           link: "https://github.com/hxxtae/bbbick"
         },
         {
-          title: "welaundry",
+          title: "Welaundry",
           description: "세탁소 전용 포스(POS) 웹 애플리케이션 입니다.",
           doList: [
             {
@@ -145,16 +145,16 @@ const resume: Resume = {
           link: "https://github.com/hxxtae/we-laundry-client"
         },
         {
-          title: "nomflix",
+          title: "Nomflix",
           description: "framer-motion 라이브러리를 활용한 Netflix Clone 웹 사이트 입니다.",
           doList: [
             {
-              do: "영화 데이터 비동기 요청 시간을 단축",
+              do: "Suspense사용 시 비동기 직렬 요청 개선",
               content: [
-                "[문제] 영화 데이터 조회 hook 비동기 요청이 직렬로 처리되는 문제 발견",
-                "컴포넌트 내에서 hook 호출 시 맨 위 hook 부터 순차적으로 호출이 진행됨을 확인",
+                "[문제] 영화 데이터 조회 비동기 요청이 직렬로 처리되는 문제 발견",
+                "react query + Suspense 사용 시 직렬로 water fall 호출이 진행됨을 Network 탭에서 확인",
                 "비동기 요청을 병렬로 처리하기 위해 따로 자식 컴포넌트로 분리하여 API 요청",
-                "비동기 응답 시간을 직렬 요청 보다 4배 단축",
+                "useQueries를 통해 Suspense 병렬 처리가 가능하도록 개선 (react-query ^4.5)",
               ]
             },
             {
