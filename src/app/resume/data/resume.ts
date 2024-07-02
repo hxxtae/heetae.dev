@@ -155,7 +155,8 @@ const resume: Resume = {
                 "react query + Suspense 사용 시 직렬로 water fall 호출이 진행됨을 Network 탭에서 확인",
                 "비동기 요청을 병렬로 처리하기 위해 따로 자식 컴포넌트로 분리하여 API 요청",
                 "useQueries를 통해 Suspense 병렬 처리가 가능하도록 개선 (react-query ^4.5)",
-              ]
+              ],
+              url: "https://dev.to/hxxtae/how-to-used-suspense-5hfd"
             },
             {
               do: "최초 웹 페이지 접속 시 빈 화면이 보여지는 시간 단축",
